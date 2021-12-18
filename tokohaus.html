@@ -1,0 +1,78 @@
+<!--WELSON MARIO NAIBAHO-->
+<!--TI 2C-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HAUS!</title>
+
+        <link rel="stylesheet" type="text/css" href="tokohaus.css">
+        <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".link").click(function () {
+                $(".link").css("color", "white");
+            });
+            $(".link").mouseover(function () {
+                $(".link").css("background-color", "silver");
+            });
+            $(".link").mouseout(function () {
+                $(".link").css("background-color", "lime");
+            });
+            $(".link").dblclick(function () {
+                $(".link").css("border", "solid 3px black");
+            });
+        });
+    </script>
+    </head>
+    <body>
+        <h1> <img src="img/logo-haus.jpeg"> HAUS!</h1>
+        <nav>
+        <ul>
+            <a class="link" href="homeuts.html"target="_blank">HOME</a>
+            <a class="link" href="profil.html"target="_blank">PROFILE</a>
+            <a class="link" href="tokohaus.html"target="_blank">TOKO</a>
+            <a class="link" href="order.html"target="_blank">ORDER</a>
+        </ul>
+        </nav>
+        <section class="minum1">
+            <div class="minum">
+                <img src="img/Red-Velvet.jpeg">
+                <h4>Red Velvet</h4>
+                <h5>Rp 13000</h5>
+                <button onclick="window.location.href='order.html'">Order</button>
+            </div>
+            <div class="minum">
+                <img src="img/Strawberry-Tea.jpeg" >
+                <h4>Strawberry Tea</h4>
+                <h5>Rp 9000</h5>
+                <button onclick="window.location.href='order.html'">Order</button>
+            </div>
+            <div class="minum">
+                <img src="img/Strawberry-Cheese-Tea.jpeg">
+                <h4>Strawberry Cheese Tea</h4>
+                <h5>Rp 17000</h5>
+                <button onclick="window.location.href='order.html'">Order</button>
+            </div>
+            <div class="minum">
+                <img src="img/Mango-Tea.jpeg" >
+                <h4>Mango Tea</h4>
+                <h5>Rp 9000</h5>
+                <button onclick="window.location.href='order.html'">Order</button>
+            </div>
+            <div class="minum">
+                <img src="img/Mango-Cheese-Tea.jpeg">
+                <h4>Mango Cheese Tea</h4>
+                <h5>Rp 17000</h5>
+                <button onclick="window.location.href='order.html'">Order</button>
+            </div>
+            <div class="minum">
+                <img src="img/Black-Jasmine-Tea.jpeg" >
+                <h4>Black Jasmine Tea</h4>
+                <h5>Rp 5000</h5>
+                <button onclick="window.location.href='order.html'">Order</button>
+            </div>
+        </section>
+    </body>
+    
+</html>

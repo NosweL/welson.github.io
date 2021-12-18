@@ -1,0 +1,105 @@
+<!--WELSON MARIO NAIBAHO-->
+<!--TI 2C-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PESANAN DAN PEMBAYARAN</title>
+
+    <link rel="stylesheet" type="text/css" href="tokohaus.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".link").click(function () {
+                $(".link").css("color", "white");
+            });
+            $(".link").mouseover(function () {
+                $(".link").css("background-color", "silver");
+            });
+            $(".link").mouseout(function () {
+                $(".link").css("background-color", "lime");
+            });
+            $(".link").dblclick(function () {
+                $(".link").css("border", "solid 3px black");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1> <img src="img/logo-haus.jpeg"> HAUS!</h1>
+    <nav>
+        <ul>
+            <a class="link" href="homeuts.html" target="_blank">HOME</a>
+            <a class="link" href="profil.html" target="_blank">PROFILE</a>
+            <a class="link" href="tokohaus.html" target="_blank">TOKO</a>
+            <a class="link" href="order.html" target="_blank">ORDER</a>
+        </ul>
+    </nav>
+    <h1>FORM PEMESANAN DAN PEMBAYARAN</h1>
+    <form name="form">
+        <label> ID Pembeli</label>
+        <input type="text" name="input_id" size=10> <br> <br>
+        <label>Nama</label>
+        <input type="text" name="input_nama" size=10>
+        <br /> <br>
+        <label>Minuman</label>
+        <select name="input_menu" onchange="munculhargamenu()">
+            <option value="Pilih">--Pilih--</option>
+            <option value="Red Velvet">Red Velvet</option>
+            <option value="Strawberry Tea">Strawberry Tea</option>
+            <option value="Strawberry Cheese Tea">Strawberry Cheese Tea</option>
+            <option value="Mango Tea">Mango Tea</option>
+            <option value="Mango Cheese Tea">Mango Cheese Tea</option>
+            <option value="Black Jasmine Tea">Black-Jasmine Tea</option>
+        </select>
+        <label>Harga Menu</label>
+        <input type="text" name="output_hargamenu" size=10>
+        <br /> <br>
+        <label>Member</label>
+        <input type="radio" name="member" value="Member" checked="checked" /> <br>
+        <br>
+        <label>non-member</label>
+        <input type="radio" name="non-member" value="Non-Member" /> <br> <br>
+        <label>Jumlah Pesanan</label>
+        <select name="input_jumlahminuman"> 
+        <option value="Pilih">--Pilih--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        </select>
+        <br /> <br>
+        <input type="button" Onclick="totalharga()" value='Hitung'>
+        <input type="reset" value='Clear'>
+        <br /> <br>
+        <label>Total Harga</label>
+        <input type="text" name="output_totalharga" size=10>
+    </form>
+    <script type='text/javascript'>
+        function munculhargamenu(){
+        var menu = (document.form.input_menu.value); 
+        if (menu == "Red Velvet"){hargamenu = 13000;} 
+        else if(menu == "Strawberry Tea"){hargamenu = 9000;}
+        else if(menu == "Strawberry Cheese Tea"){hargamenu = 17000;}
+        else if(menu == "Mango Tea"){hargamenu = 9000;}
+        else if(menu == "Mango Cheese Tea"){hargamenu = 17000;}
+        else if(menu == "Black Jasmine Tea"){hargamenu = 5000;}
+        document.form.output_hargamenu.value=eval(hargamenu); 
+       }
+        function member(){
+        if (document.form.member.checked == true){diskon = 0.5;}
+        else{diskon=0;}
+        document.form.output_diskon.value=eval(diskon)*(eval(document.form.output_tambahanbiaya.value) + eval(document.form.output_hargamenu.value));
+       }
+        function totalharga(){
+        var jumlahmenu = (document.form.input_jumlahmenu.value);
+        document.form.output_totalharga.value=eval(jumlahmenu)*(eval(document.form.output_tambahanbiaya.value)+eval(document.form.output_hargamenu.value))-eval(document.form.output_diskon.value)
+       }
+        </script>   
+</body>
+
+</html>

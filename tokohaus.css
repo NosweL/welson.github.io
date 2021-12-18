@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    color: green;
+    padding: 20px;
+}
+nav{
+    background-color: lime;
+    display: grid;
+    place-items: center;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul a{
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s ease-in;
+    font-size: 18px;
+}
+.minum1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    tab-size: 30px;
+    padding: 30px 20px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+.minum img{
+    width: 30%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.minum img:hover{
+    transform: scale(1.04);
+}
+.minum button{
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 15px;
+    display: block;
+}
+.link{
+    top: 100px;
+    margin: 20px;
+    padding: 10px;
+    display: inline-flex;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}

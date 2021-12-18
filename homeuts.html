@@ -1,0 +1,86 @@
+<!--WELSON MARIO NAIBAHO-->
+<!--TI 2C-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOME</title>
+        <link rel="stylesheet" type="text/css" href="homeuts.css">
+        <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".link").click(function () {
+                $(".link").css("color", "white");
+            });
+            $(".link").mouseover(function () {
+                $(".link").css("background-color", "silver");
+            });
+            $(".link").mouseout(function () {
+                $(".link").css("background-color", "grey");
+            });
+            $(".link").dblclick(function () {
+                $(".link").css("border", "solid 3px black");
+            });
+        });
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#flip").css("color", "white");
+            });
+            $("#flip").mouseover(function () {
+                $("#flip").css("background-color", "silver");
+            });
+            $("#flip").mouseout(function () {
+                $("#flip").css("background-color", "grey");
+            });
+            $("#flip").dblclick(function () {
+                $("#flip").css("border", "solid 3px black");
+            });
+        });
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $("h1").click(function () {
+                $("h1").css("color", "white");
+            });
+            $("h1").mouseover(function () {
+                $("h1").css("background-color", "silver");
+            });
+            $("h1").mouseout(function () {
+                $("h1").css("background-color", "orange");
+            });
+            $("h1").dblclick(function () {
+                $("h1").css("border", "solid 3px black");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#kotak2").slideToggle("slow");
+            });
+        });    
+    </script>
+    </head>
+    <body>
+        <ul>
+            
+            <a class="link" href="homeuts.html"target="_blank">HOME</a>
+            <a class="link" href="profil.html"target="_blank">PROFILE</a>
+            <a class="link" href="tokohaus.html"target="_blank">TOKO</a>
+            <a class="link" href="order.html"target="_blank">ORDER</a>
+        </ul>
+        <h1>WELCOME TO MY WEBSITE</h1> <br>
+        <h2>Ini adalah halaman website menu utama dari UTS Desain Website <br>
+            Silahkan menekan menu hyperlink diatas untuk melihat website yang lainnya <br>
+            Terima Kasih.</h2>
+            <div id="flip">Click Disini Untuk Membuka dan Menutup Slide</div>
+            <div id="kotak2" >Ini adalah halaman website menu utama dari UTS Desain Website <br>
+                Silahkan menekan menu hyperlink diatas untuk melihat website yang lainnya <br>
+                Terima Kasih.</div>
+
+    </body>
+</html>
